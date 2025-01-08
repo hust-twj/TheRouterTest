@@ -1,0 +1,35 @@
+pluginManagement {
+    repositories {
+        google {
+            content {
+                includeGroupByRegex("com\\.android.*")
+                includeGroupByRegex("com\\.google.*")
+                includeGroupByRegex("androidx.*")
+            }
+        }
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+// VERSION_CATALOGS当前并不是稳定版本功能
+//enableFeaturePreview("VERSION_CATALOGS")
+
+dependencyResolutionManagement {
+   // repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+    // 编写版本目录的依赖库
+//    versionCatalogs {
+//        libs {
+//            from(files("./libs.versions.toml"))
+//        }
+//    }
+}
+
+rootProject.name = "TheRouterTest"
+include ':app'
+include ':common'
