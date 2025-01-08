@@ -12,7 +12,6 @@ import com.husttwj.common.getAppProvider
 class App: Application() {
 
     override fun attachBaseContext(base: Context?) {
-        Thread.sleep(4000)
         super.attachBaseContext(base)
 
         // 禁用自动初始化

@@ -1,12 +1,6 @@
 [versions]
 agp = "7.1.3"
 kotlin = "1.9.0"
-coreKtx = "1.12.0"
-appcompat = "1.7.0"
-material = "1.12.0"
-gradleVersion = "7.1.3"
-# toolsVersion = gradlePluginVersion + 23.0.0
-toolsVersion = "30.1.3"
 #注意：与kotlin版本与ksp版本需保持一致， https://github.com/google/ksp/releases
 kotlinVersion = "1.9.21"
 kspVersion = "1.9.21-1.0.16"
@@ -14,17 +8,12 @@ kspVersion = "1.9.21-1.0.16"
 theRouterVersion = "1.2.4-rc3"
 
 [libraries]
-androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
-androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
-
 # Router
 therouter = { module = "cn.therouter:router", version.ref = "theRouterVersion" }
 therouterKsp = { module = "cn.therouter:apt", version.ref = "theRouterVersion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
-android-library = { id = "com.android.library", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 therouter-plugin = { id = "cn.therouter", version.ref = "theRouterVersion" }
 ksp-symbol-processing-gradle-plugin = { id = "com.google.devtools.ksp", version.ref = "kspVersion" }
